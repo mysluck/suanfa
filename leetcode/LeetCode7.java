@@ -37,26 +37,29 @@ public class LeetCode7 {
     //解题思路
     //1 负数比正数大1 所以转负数 获取系统最小值 minvalue，需要判断溢出 如果value<
     public static int reverse(int x) {
-        int minValue = Integer.MIN_VALUE;
-        int val1 = minValue / 10;
-        int val2 = minValue % 10;
-        //是否是正数？true:负数 false：正数
-        boolean b = ((x >>> 31) & 1) == 1;
-        int tmp = b ? x : -x;
         int ans = 0;
-        while (tmp != 0) {
-            if (ans < val1 || (ans == val1 && tmp < val2)) {
+        //true 正数 false 负数
+        boolean flag = ((x >>> 31) & 1) == 1 ? false : true;
+        int temp = flag ? -x : x;
+        int minValue = Integer.MIN_VALUE;
+        int x1 = minValue / 10;
+        int x2 = minValue % 10;
+        System.out.println(flag);
+        while (temp != 0) {
+            int i2 = temp % 10;
+            if (ans < x1 || ans == x1 && i2 < x2) {
                 return 0;
             }
-            int cur = tmp % 10;
-            ans = ans * 10 + cur;
-            tmp = tmp / 10;
+            temp = temp / 10;
+            ans = ans * 10 + i2;
         }
-        return b ? ans : -ans;
+        return flag ? Math.abs(ans) : ans;
     }
 
     public static void main(String[] args) {
-        int x = 1534236469;
+        int x = -522236469;
         System.out.println(reverse(x));
+//        System.out.println(((x >>> 31) & 1));
+//        System.out.println(x % 10);
     }
 }
