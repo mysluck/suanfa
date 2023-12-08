@@ -1,5 +1,5 @@
 /**
- * * URL:https://leetcode.cn/problems/container-with-most-water/
+ * * https://leetcode.cn/problems/container-with-most-water/
  * <p>
  * 11. 盛最多水的容器
  */
