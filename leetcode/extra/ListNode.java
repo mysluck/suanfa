@@ -1,4 +1,4 @@
-package 新手班;
+package extra;
 
 public class ListNode {
     int val;

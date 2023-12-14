@@ -1,4 +1,4 @@
-package 新手班;
+package extra;
 
 public class 二分查找 {
     public static void main(String[] args) {

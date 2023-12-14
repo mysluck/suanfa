@@ -1,4 +1,4 @@
-package 新手班;
+package extra;
 
 public class 空瓶子 {
     public static void main(String[] args) {

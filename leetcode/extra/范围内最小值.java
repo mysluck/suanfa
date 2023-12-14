@@ -1,4 +1,4 @@
-package 新手班;
+package extra;
 
 //获取36-67范围随机数有序 0-31
 public class 范围内最小值 {

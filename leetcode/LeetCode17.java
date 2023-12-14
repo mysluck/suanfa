@@ -44,7 +44,7 @@ public class LeetCode17 {
             {'a', 'b', 'c'},
             {'d', 'e', 'f'},
             {'g', 'h', 'i'},
-            {'j','k','l'},
+            {'j', 'k', 'l'},
             {'m', 'n', 'o'},
             {'p', 'q', 'r', 's'},
             {'t', 'u', 'v'},
@@ -53,7 +53,7 @@ public class LeetCode17 {
 
     public static List<String> letterCombinations(String digits) {
         List<String> ans = new ArrayList<>();
-        if(digits==null||digits.length()==0){
+        if (digits == null || digits.length() == 0) {
             return ans;
         }
         char[] chars = digits.toCharArray();
@@ -64,14 +64,14 @@ public class LeetCode17 {
         return ans;
     }
 
-    public static void process(char[] digitChars, int index, char[] path,List<String> ans) {
+    public static void process(char[] digitChars, int index, char[] path, List<String> ans) {
         if (index == digitChars.length) {
             ans.add(String.valueOf(path));
         } else {
             char[] cands = phone[digitChars[index] - '2'];
             for (char c : cands) {
                 path[index] = c;
-                process(digitChars, index+1, path, ans);
+                process(digitChars, index + 1, path, ans);
             }
         }
 
@@ -89,23 +89,26 @@ public class LeetCode17 {
         strings.forEach(System.out::println);
     }
 
-    public static List<String> method1(String str) {
-        char[] chars = str.toCharArray();
+
+    public static List<String> method(String s) {
         List<String> ans = new ArrayList<>();
-        char[] path = new char[str.length()];
-        method2(chars, 0, path, ans);
+        if (s == null || s.length() == 0) {
+            return ans;
+        }
+        char[] chars = s.toCharArray();
+        char[] path = new char[chars.length];
+        process1(chars, 0, path, ans);
         return ans;
     }
 
-    private static void method2(char[] chars, int index, char[] path, List<String> ans) {
+    private static void process1(char[] chars, int index, char[] path, List<String> ans) {
         if (index == chars.length) {
             ans.add(String.valueOf(path));
         } else {
-
             char[] chars1 = phone[chars[index] - '2'];
-            for (char c : chars1) {
-                path[index] = c;
-                method2(chars, index + 1, path, ans);
+            for (int i = 0; i < chars1.length; i++) {
+                path[index] = chars1[i];
+                process1(chars, index + 1, path, ans);
             }
         }
     }

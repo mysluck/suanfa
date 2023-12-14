@@ -1,4 +1,4 @@
-package 新手班;
+package extra;
 
 public class 链表相加 {
     public static void main(String[] args) {

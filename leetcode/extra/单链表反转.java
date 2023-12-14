@@ -1,4 +1,4 @@
-package 新手班;
+package extra;
 
 
 public class 单链表反转 {

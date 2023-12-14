@@ -1,4 +1,4 @@
-package 新手班;
+package extra;
 
 public class IsSameTree {
     public boolean isSameTree(TreeNode p, TreeNode q) {

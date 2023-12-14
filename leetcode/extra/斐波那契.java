@@ -1,4 +1,4 @@
-package 新手班;
+package extra;
 
 /**
  * n的阶乘*n-1的阶乘。。。*1

@@ -1,4 +1,4 @@
-package 新手班;
+package extra;
 
 /**
  * https://leetcode.cn/problems/path-sum/

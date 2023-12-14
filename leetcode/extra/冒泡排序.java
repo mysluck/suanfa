@@ -1,4 +1,4 @@
-package 新手班;
+package extra;
 
 import java.util.Arrays;
 
@@ -17,7 +17,8 @@ public class 冒泡排序 {
         }
         int length = arr.length;
         //第一个个第二个对比 大的靠后 第二个和第三个对比
-        for (int i = length - 1; i > 0; i--) {
+        for (int i = 0 ;i <length; i++) {
+//        for (int i = length - 1; i > 0; i--) {
 //        for (int i = 1; i < length; i++) {
             for (int j = 0; j < i; j++) {
 
